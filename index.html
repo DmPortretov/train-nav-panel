@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <title>Panel</title>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <div class="nav-bar-body">
+        <ul>
+            <p>Nav bar</p>
+            <li class="active"><img src="img/goroh.png" alt="">Home</li>
+            <li><img src="img/apple.png" alt="">Live</li>
+            <li><img src="img/banana.png" alt="">Scores</li>
+            <li><img src="img/dune.png" alt="">Settings</li>
+            <li><img src="img/lotus.png" alt="">Notifications</li>
+            <li><img src="img/paprika.png" alt="">Search</li>
+            <li><img src="img/tomato.png" alt="">Account</li>
+        </ul>
+    </div>
+</body>
+<script>
+    let items = document.querySelectorAll('li');
+
+    items.forEach(item => {
+        item.addEventListener('click', () => {
+            items.forEach(item => item.classList.remove('active'))
+            item.classList.add('active')
+        })
+    });
+</script>
+
+</html>
